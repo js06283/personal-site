@@ -51,7 +51,7 @@ function NavigationBar({
   // #endregion
 
   return (
-    <Navbar color="light" light expand="md">
+    <Navbar color="light" light expand="lg">
       <NavbarBrand href="/">{brand}</NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
@@ -63,13 +63,13 @@ function NavigationBar({
               </NavLink>
             </NavItem>
           ))}
-          {isAuthenticated && (
+          {/* {isAuthenticated && (
             <NavItem>
               <NavLink href="#" onClick={handlesDisconnect}>
                 Disconnect
               </NavLink>
             </NavItem>
-          )}
+          )} */}
         </Nav>
       </Collapse>
     </Navbar>

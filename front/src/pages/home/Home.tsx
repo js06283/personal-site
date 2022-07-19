@@ -6,27 +6,60 @@ import FadeInEntrance from '../../components/fadeInEntrance';
 import HomeInfo from './styled/HomeInfo';
 import MainTitle from './styled/MainTitle';
 import { ReduxConnectedProps, OwnProps } from './index';
+import { CodeSquare, ClipboardData, FileEarmarkPerson, Camera } from 'react-bootstrap-icons';
+import { Media } from 'reactstrap';
+import Ripples  from 'react-ripples';
 
 // #region  types
 export type Props = RouteComponentProps & ReduxConnectedProps & OwnProps;
-// #endregion
+// #endregion 
+
+const headshot = require('../../../../assets/headshot.png');
 
 function Home() {
   return (
     <FadeInEntrance>
       <Jumbotron>
         <HomeInfo>
-          <MainTitle>ReactJS 16.14 Bootstrap 4</MainTitle>
-          <h2>with Hot Reload</h2>
-          <h2>and React Router v5.x</h2>
-          <h2>and webpack 5.x</h2>
-          <h1>Starter</h1>
-          <p>
-            <Link className="btn btn-success btn-lg" to={'/about'}>
-              <i className="fa fa-info" />
-              &nbsp; go to about
-            </Link>
-          </p>
+          <div className="container">
+            <div className="row">
+            <div className="col">
+                <MainTitle>Jessica Shi</MainTitle>
+                <p>
+                  I'm a junior at Columbia studying Operations Research and minoring in 
+                  Economics and Computer Science. I've worked as a software developer at the 
+                  US Census Bureau and Microsoft. 
+                </p>
+              <div className="dflex flex-row">
+                <Link className="btn btn-dark btn-lg mr-2" to={'/engineering'}>
+                  <CodeSquare />
+                  &nbsp; Engineering
+                </Link>
+
+                <Link className="btn btn-dark btn-lg" to={'/research'}>
+                  <ClipboardData />
+                  &nbsp; Research
+                </Link>
+                </div> 
+                <div className="dflex flex-row mt-2">
+                <Link className="btn btn-dark btn-lg mr-2" to={'/resume'}>
+                  <FileEarmarkPerson />
+                  &nbsp; Resume
+                </Link>
+
+                <Link className="btn btn-dark btn-lg" to={'/art'}>
+                  <Camera />
+                  &nbsp; Art
+                </Link>
+              </div> 
+            </div>
+              <div className="col">
+          
+                  <Media object src={headshot} alt="headshot" style={{ width: '75%' }} />
+            
+              </div>
+            </div>
+          </div>
         </HomeInfo>
       </Jumbotron>
     </FadeInEntrance>

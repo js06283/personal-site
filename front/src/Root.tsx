@@ -7,7 +7,6 @@ import configureStore from './redux/store/configureStore';
 import ScrollTop from './components/scrollToTop';
 import MainRoutes from './routes/MainRoutes';
 import GlobalStyle from './style/GlobalStyles';
-import Login from './pages/login';
 import registerServiceWorker from './services/sw/registerServiceWorker';
 import LogoutRoute from './components/logoutRoute';
 import MainLayout from './layout/mainLayout';
@@ -42,12 +41,6 @@ class Root extends Component<Props, State> {
               <ScrollTop>
                 <Fragment>
                   <Switch>
-                    <Route exact path="/login">
-                      <Login />
-                    </Route>
-
-                    {/* logout: just redirects to login (App will take care of removing the token) */}
-                    <LogoutRoute path="/logout" />
 
                     {/* Application with main layout (could have multiple applications with different layouts) */}
                     <Route path="*">

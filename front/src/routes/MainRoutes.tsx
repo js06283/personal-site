@@ -2,9 +2,11 @@ import React from 'react';
 import { Route, Switch } from 'react-router';
 import {
   Home as AsyncHome,
-  About as AsyncAbout,
+  Engineering as AsyncEngineering,
+  Resume as AsyncResume, 
   PageNotFound as AsyncPageNotFound,
-  Protected as AsyncProtected,
+  Research as AsyncResearch, 
+  Art as AsyncArt,
 } from './routes';
 import PrivateRoute from '../components/privateRoute';
 
@@ -16,14 +18,21 @@ const MainRoutes = () => {
         <AsyncHome />
       </Route>
 
-      <Route path="/about">
-        <AsyncAbout />
+      <Route path="/engineering">
+        <AsyncEngineering />
       </Route>
 
-      {/* private views: need user to be authenticated */}
-      <PrivateRoute path="/protected">
-        <AsyncProtected />
-      </PrivateRoute>
+      <Route path="/research">
+        <AsyncResearch />
+      </Route>
+
+      <Route path="/resume">
+        <AsyncResume />
+      </Route>
+
+      <Route path="/art">
+        <AsyncArt/>
+      </Route>
 
       <Route path="*">
         <AsyncPageNotFound />

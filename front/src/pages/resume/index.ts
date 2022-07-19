@@ -1,6 +1,6 @@
 import { bindActionCreators, compose, Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import About from './About';
+import Resume from './Resume';
 
 // #region redux map state and dispatch to props
 const mapStateToProps = (/* state: RootState */) => {
@@ -18,4 +18,4 @@ export type OwnProps = Record<string, any>;
 // #endregion
 
 const connector = connect(mapStateToProps, mapDispatchToProps);
-export default compose<any>(connector)(About);
+export default compose<any>(connector)(Resume);

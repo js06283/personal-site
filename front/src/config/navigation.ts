@@ -13,7 +13,7 @@ export type Navigation = {
 // #endregion
 
 const navigation = Object.freeze({
-  brand: 'React Redux Bootstrap Starter',
+  brand: 'Jessica Shi',
   leftLinks: [],
   rightLinks: [
     {
@@ -21,15 +21,27 @@ const navigation = Object.freeze({
       link: '/',
     },
     {
-      label: 'Protected',
-      link: '/protected',
-      view: 'protected',
+      label: 'Resume',
+      link: '/resume',
+      view: 'resume',
       isRouteBtn: true,
     },
     {
-      label: 'About',
-      link: '/about',
-      view: 'about',
+      label: 'Engineering',
+      link: '/engineering',
+      view: 'engineering',
+      isRouteBtn: true,
+    },
+    {
+      label: 'Research',
+      link: '/research',
+      view: 'research',
+      isRouteBtn: true,
+    },
+    {
+      label: 'Art',
+      link: '/art',
+      view: 'art',
       isRouteBtn: true,
     },
   ],

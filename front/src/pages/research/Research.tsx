@@ -2,19 +2,23 @@ import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 import FadeInEntrance from '../../components/fadeInEntrance';
 import { OwnProps, ReduxConnectedProps } from './index';
+import { Experience } from '../../components/Experience';
+import { research } from '../../data/research'; 
 
 // #region types
 export type Props = RouteComponentProps & ReduxConnectedProps & OwnProps;
 // #endregion
 
-function About() {
+function Research() {
   return (
     <FadeInEntrance>
-      <h1>About</h1>
+      <Experience
+        data={research}
+      />
     </FadeInEntrance>
   );
 }
 
-About.displayName = 'About';
+Research.displayName = 'About';
 
-export default withRouter(About);
+export default withRouter(Research);

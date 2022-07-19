@@ -31,5 +31,12 @@
     "front-prod": "cd ./front && npm run prod && cd ..",
     "prestart": "npm run init",
     "start": "cd ./server && npm run start-server && cd .."
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.8.3",
+    "programming-languages-logos": "^0.0.3",
+    "react-bootstrap-icons": "^1.8.4",
+    "react-pll": "^0.0.1",
+    "react-ripples": "^2.2.1"
   }
 }

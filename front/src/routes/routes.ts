@@ -3,15 +3,19 @@ import loadable from 'loadable-components';
 export const Home = loadable(() => import('../pages/home'), {
   modules: ['home'],
 });
-export const About = loadable(() => import('../pages/about'), {
-  modules: ['about'],
+export const Engineering = loadable(() => import('../pages/engineering'), {
+  modules: ['engineering'],
 });
-export const Login = loadable(() => import('../pages/login'), {
-  modules: ['login'],
-});
-export const Protected = loadable(() => import('../pages/protected'), {
-  modules: ['protected'],
+export const Research = loadable(() => import('../pages/research'), {
+  modules: ['research'],
 });
 export const PageNotFound = loadable(() => import('../pages/pageNotFound'), {
   modules: ['pageNotFound'],
 });
+export const Art = loadable(() => import('../pages/art'), {
+  modules: ['art'],
+});
+export const Resume = loadable(() => import('../pages/resume'), {
+  modules: ['resume'],
+});
+
