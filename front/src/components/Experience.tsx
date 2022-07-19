@@ -112,7 +112,7 @@ export const Experience = ({ data }: ExperienceProps) => {
     <React.Fragment> 
       <div className="container" >
         <div className="row">
-          <div className="col-lg-auto">
+          <div className="col-lg-auto" style={{marginTop: '20px'}}>
             {buttonList}
           </div>
           <div className="col" style={{ margin: '10px', border: '1px solid', padding: '10px', borderRadius: '5%' }}>

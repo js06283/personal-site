@@ -7,9 +7,11 @@ import {
   Nav,
   NavItem,
   NavLink,
+  Media,
 } from 'reactstrap';
 import { RouteComponentProps } from 'react-router';
 import { OwnProps, ReduxConnectedProps } from './index';
+const greyLogo = require('../../../../assets/offwhite_logo.png');
 
 // #region types
 type Props = RouteComponentProps & OwnProps & ReduxConnectedProps;
@@ -52,7 +54,8 @@ function NavigationBar({
 
   return (
     <Navbar color="light" light expand="lg">
-      <NavbarBrand href="/">{brand}</NavbarBrand>
+      <NavbarBrand href="/"><Media src={greyLogo} style={{ width: '100px' }}></Media></NavbarBrand>
+      {/* <NavbarBrand href="/">{brand}</NavbarBrand> */}
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto" navbar>

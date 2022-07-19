@@ -5,6 +5,8 @@ import { OwnProps, ReduxConnectedProps } from './index';
 import { Experience } from '../../components/Experience';
 import { research } from '../../data/research'; 
 
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 // #region types
 export type Props = RouteComponentProps & ReduxConnectedProps & OwnProps;
 // #endregion

@@ -12,12 +12,13 @@ export const engineering: { [key: string]: expProps } = {
     position: 'Software Engineer Intern',
     location: 'Bellevue, Washington',
     time: 'May 2022-Aug 2022',
-    resumedetails: ['resume'],
-    description: ['engineer', 'software'],
-    logos: [bing_maps, microsoft],
-    tech: [
-      'npm','react','vscode','typescript','csharp','html5','css3'
+    resumedetails: ['Develop a portal with geospatial data visualization in table and map format for internal analysis to compare geographic features. ',
+    'Frontend web development with Typescript, React, and Redux. ',],
+    description: [
+      
     ],
+    logos: [bing_maps, microsoft],
+    tech: ['npm', 'react', 'vscode', 'typescript', 'csharp', 'html5', 'css3'],
     icon: 'bi bi-microsoft',
   },
   census: {
@@ -25,8 +26,11 @@ export const engineering: { [key: string]: expProps } = {
     position: 'Software Engineer Intern',
     location: 'Remote',
     time: 'June 2022-September 2021',
-    resumedetails: ['resume'],
-    description: ['engineer', 'software'],
+    resumedetails: [
+      'Developed an automated production system for statistical products for criminal justice agencies that provide data to the Criminal Justice Administrative Records System (CJARS) with an emphasis on privacy and disclosure considerations. Full-stack web development in Python, Django, HTML, SQL, Markdown and worked with a complex relational database.',
+      'Engaged in the civic tech community through virtual site visits, one-on-one mentorship, and professional development. ',
+    ],
+    description: [],
     logos: [census, cdf, cjars],
     tech: [],
     icon: 'bi bi-graph-up-arrow',
