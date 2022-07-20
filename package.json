@@ -4,14 +4,14 @@
   "description": "react js + redux + react router + hot reload + devTools + bootstrap + webpack starter",
   "author": "Erwan DATIN <erwan.datin@gmail.com> (MacKentoch)",
   "license": "ISC",
-  "homepage": "https://github.com/MacKentoch/react-redux-bootstrap-webpack-starter#readme",
+  "homepage": "https://js06283.github.io",
   "main": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MacKentoch/react-redux-bootstrap-webpack-starter.git"
+    "url": "git+https://github.com/js06283/jessica-shi.git"
   },
   "bugs": {
-    "url": "https://github.com/MacKentoch/react-redux-bootstrap-webpack-starter/issues"
+    "url": "https://github.com/js06283/jessica-shi/issues"
   },
   "engines": {
     "node": ">=16",
@@ -30,7 +30,10 @@
     "prefront-prod": "npm run init",
     "front-prod": "cd ./front && npm run prod && cd ..",
     "prestart": "npm run init",
-    "start": "cd ./server && npm run start-server && cd .."
+    "start": "cd ./server && npm run start-server && cd ..",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "bootstrap-icons": "^1.8.3",
@@ -38,5 +41,8 @@
     "react-bootstrap-icons": "^1.8.4",
     "react-pll": "^0.0.1",
     "react-ripples": "^2.2.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
