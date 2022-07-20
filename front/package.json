@@ -8,10 +8,10 @@
   "main": "src/index.tsx",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MacKentoch/react-redux-bootstrap-webpack-starter.git"
+    "url": "git+https://github.com/js06283/jessica-shi.git"
   },
   "bugs": {
-    "url": "https://github.com/MacKentoch/react-redux-bootstrap-webpack-starter/issues"
+    "url": "https://github.com/js06283/jessica-shi/issues"
   },
   "engines": {
     "node": ">=16",
@@ -30,9 +30,7 @@
     "preanalyze": "npm run prod",
     "analyze": "webpack --config webpack.analyze.config.js",
     "prestart": "npm run clean-docs",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.hot.reload.config.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.hot.reload.config.js"
   },
   "reactSnap": {
     "source": "../docs"

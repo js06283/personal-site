@@ -19,7 +19,7 @@ const config = {
   entry: { app: indexFile },
   output: {
     path: path.join(__dirname, '/../docs/assets'),
-    publicPath: '/assets/',
+    publicPath: '/jessica-shi/',
     filename: '[name].[contenthash].js',
     chunkFilename: '[name].[chunkhash].js',
     assetModuleFilename: 'assets/[contenthash][ext][query]',

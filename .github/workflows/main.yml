@@ -1,0 +1,30 @@
+name: Build and GH-Page Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Install
+        run: npm run install
+
+      - name: Build
+        run: |
+          npm run init
+          npm run front-prod
+
+      - name: Deploy to GH Page
+        uses: js07283/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: docs

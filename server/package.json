@@ -1,5 +1,5 @@
 {
-  "name": "react-redux-bootstrap-webpack-starter-server",
+  "name": "jessica-shi",
   "version": "2.0.0",
   "author": "Erwan DATIN <erwan.datin@gmail.com> (MacKentoch)",
   "license": "MIT",
@@ -7,10 +7,10 @@
   "main": "out/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MacKentoch/react-redux-bootstrap-webpack-starter.git"
+    "url": "git+https://github.com/js06283/jessica-shi.git"
   },
   "bugs": {
-    "url": "https://github.com/MacKentoch/react-redux-bootstrap-webpack-starter/issues"
+    "url": "https://github.com/js06283/jessica-shi/issues"
   },
   "engines": {
     "node": ">=16",

@@ -31,9 +31,8 @@
     "front-prod": "cd ./front && npm run prod && cd ..",
     "prestart": "npm run init",
     "start": "cd ./server && npm run start-server && cd ..",
-    "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run init",
+    "deploy": "gh-pages -d docs"
   },
   "dependencies": {
     "bootstrap-icons": "^1.8.3",
