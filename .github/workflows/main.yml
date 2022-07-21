@@ -21,7 +21,7 @@ jobs:
       - name: Build
         run: |
           npm run init
-          npm run front-prod
+          npm run front-prod 
 
       - name: Deploy to GH Page
         uses: JamesIves/github-pages-deploy-action@v4
