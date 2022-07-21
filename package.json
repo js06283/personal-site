@@ -4,7 +4,7 @@
   "description": "react js + redux + react router + hot reload + devTools + bootstrap + webpack starter",
   "author": "Erwan DATIN <erwan.datin@gmail.com> (MacKentoch)",
   "license": "ISC",
-  "homepage": "https://js06283.github.io",
+  "homepage": "https://js06283.github.io/jessica-shi",
   "main": "",
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
     "front-prod": "cd ./front && npm run prod && cd ..",
     "prestart": "npm run init",
     "start": "cd ./server && npm run start-server && cd ..",
-    "predeploy": "npm run init && npm front-prod",
+    "predeploy": "npm run init",
     "deploy": "gh-pages -d docs"
   },
   "dependencies": {
