@@ -31,7 +31,7 @@
     "front-prod": "cd ./front && npm run prod && cd ..",
     "prestart": "npm run init",
     "start": "cd ./server && npm run start-server && cd ..",
-    "predeploy": "npm run init",
+    "predeploy": "npm run init && npm front-prod",
     "deploy": "gh-pages -d docs"
   },
   "dependencies": {
