@@ -10,7 +10,10 @@ export type Props = RouteComponentProps & ReduxConnectedProps & OwnProps;
 function Art() {
   return (
     <FadeInEntrance>
-      <h1>Engineering</h1>
+      <h1>Art</h1>
+      <div>
+        Under construction
+      </div>
     </FadeInEntrance>
   );
 }
