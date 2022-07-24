@@ -18,29 +18,29 @@ const navigation = Object.freeze({
   rightLinks: [
     {
       label: 'Home',
-      link: '/',
+      link: '/jessica-shi',
     },
     {
       label: 'Resume',
-      link: '/resume',
+      link: '/jessica-shi/resume',
       view: 'resume',
       isRouteBtn: true,
     },
     {
       label: 'Engineering',
-      link: '/engineering',
+      link: '/jessica-shi/engineering',
       view: 'engineering',
       isRouteBtn: true,
     },
     {
       label: 'Research',
-      link: '/research',
+      link: '/jessica-shi/research',
       view: 'research',
       isRouteBtn: true,
     },
     {
       label: 'Art',
-      link: '/art',
+      link: '/jessica-shi/art',
       view: 'art',
       isRouteBtn: true,
     },
