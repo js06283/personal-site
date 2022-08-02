@@ -13,6 +13,7 @@ import {
   Camera,
 } from 'react-bootstrap-icons';
 import { Media } from 'reactstrap';
+import { SocialIcon } from 'react-social-icons';
 import Ripples from 'react-ripples';
 
 // #region  types
@@ -33,7 +34,15 @@ function Home() {
                 <p>
                   I'm a junior at Columbia studying Operations Research and
                   minoring in Economics and Computer Science. I've worked as a
-                  software developer at the US Census Bureau and Microsoft.
+                  software engineer at the US Census Bureau and Microsoft, and
+                  I've been involved in research at Columbia University and the
+                  Mailman School of Public Health.
+                </p>
+                <br></br>
+                <p>
+                  I'm interested in pursuing a graduate degree in Operations
+                  Research or working in the tech or finance space. Currently,
+                  I'm looking for opportunities for Summer 2023.
                 </p>
                 <div className="dflex flex-row">
                   <Link
@@ -65,6 +74,17 @@ function Home() {
                     <Camera />
                     &nbsp; Art
                   </Link>
+                </div>
+                <div className="dflex flex-row mt-2">
+                  <SocialIcon
+                    url="https://www.instagram.com/jessica_shii/"
+                    className="mr-2"
+                  />
+                  <SocialIcon
+                    url="https://www.linkedin.com/in/jessicashi605/"
+                    className="mr-2"
+                  />
+                  <SocialIcon url="https://github.com/js06283" />
                 </div>
               </div>
               <div className="col">

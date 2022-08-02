@@ -14,112 +14,137 @@ export interface expProps {
   icon: string;
 }
 
-const techLogo: { [key: string]:string} = {
-  'npm': 'devicon-npm-original-wordmark colored',
-  'react': 'devicon-react-original-wordmark colored',
-  'vscode': "devicon-vscode-plain-wordmark colored", 
-  'typescript': "devicon-typescript-plain colored",
-  'csharp': "devicon-csharp-plain-wordmark colored",
-  'html5': "devicon-html5-plain-wordmark colored",
-  'css3': "devicon-css3-plain-wordmark colored"
-}
+const techLogo: { [key: string]: string } = {
+  npm: 'devicon-npm-original-wordmark colored',
+  react: 'devicon-react-original-wordmark colored',
+  vscode: 'devicon-vscode-plain-wordmark colored',
+  typescript: 'devicon-typescript-plain colored',
+  csharp: 'devicon-csharp-plain-wordmark colored',
+  html5: 'devicon-html5-plain-wordmark colored',
+  css3: 'devicon-css3-plain-wordmark colored',
+  django: 'devicon-django-plain colored',
+  python: 'devicon-python-plain colored',
+  networkx: 'devicon-networkx-original colored',
+  flask: 'devicon-flask-original-wordmark colored',
+  git: 'devicon-git-plain-wordmark colored',
+  latex: 'devicon-latex-original colored',
+  numpy: 'devicon-numpy-original-wordmark colored',
+  r: 'devicon-rstudio-plain colored',
+  sqlite: 'devicon-sqlite-plain-wordmark colored',
+  c: 'devicon-c-plain colored',
+};
 
 function getDetails(resumedetails: string[], details: string[]) {
-  let detailList: JSX.Element[] = []; 
+  let detailList: JSX.Element[] = [];
   const alldetails = resumedetails.concat(details);
   if (alldetails) {
-    alldetails.forEach(e => {
-      detailList.push(
-        <li>{e}</li>
-      )
-    })
+    alldetails.forEach((e) => {
+      detailList.push(<li>{e}</li>);
+    });
   }
-  return detailList; 
-};
+  return detailList;
+}
 
 function getLogos(logos: string[] | undefined) {
   let logoList: JSX.Element[] = [];
   if (logos) {
-    logos.forEach(logo => {
-      
+    logos.forEach((logo) => {
       logoList.push(
-        <Media object src={logo} alt="logo" style={{ width: '15%', borderRadius: '10%', margin: '10px'}} />
-      )
-    })
+        <Media
+          object
+          src={logo}
+          alt="logo"
+          style={{ width: '15%', borderRadius: '10%', margin: '10px' }}
+        />,
+      );
+    });
   }
-  return logoList; 
+  return logoList;
 }
 
 function getTech(tech: string[] | undefined) {
   let techList: JSX.Element[] = [];
   if (tech) {
-    tech.forEach(t => {
+    tech.forEach((t) => {
       techList.push(
-        <i className={techLogo[t]} style={{
-          fontSize: '40px', margin: '10px'
-       }} />
-        
-      )
-    })
+        <i
+          className={techLogo[t]}
+          style={{
+            fontSize: '40px',
+            margin: '10px',
+          }}
+        />,
+      );
+    });
   }
-  return techList; 
+  return techList;
 }
 
 function getExp(i: string, data: { [key: string]: expProps }) {
   if (i in data) {
-    var e:expProps = data[i];
-    return(
+    var e: expProps = data[i];
+    return (
       <div>
         <h1>{e.name}</h1>
         <h2>{e.position}</h2>
-        <div style={{fontSize: '20px', fontStyle: 'italic'}}>{e.location}</div>
-        <div style={{fontSize:'17px', fontStyle: 'italic'}}>{e.time}</div>
-        <ul>
-          {getDetails(e.resumedetails, e.description)}
-        </ul>
-        <div className='dflex flex-row'> 
-          {getLogos(e.logos)}
+        <div style={{ fontSize: '20px', fontStyle: 'italic' }}>
+          {e.location}
         </div>
-        <div>
-          {getTech(e.tech)}
-        </div>
+        <div style={{ fontSize: '17px', fontStyle: 'italic' }}>{e.time}</div>
+        <ul>{getDetails(e.resumedetails, e.description)}</ul>
+        <div className="dflex flex-row">{getLogos(e.logos)}</div>
+        <div>{getTech(e.tech)}</div>
         <p></p>
       </div>
-    )
+    );
   }
-  return <div></div>; 
+  return <div></div>;
 }
 
-interface ExperienceProps{
-  data: {[key:string]: expProps},
+interface ExperienceProps {
+  data: { [key: string]: expProps };
 }
 
 export const Experience = ({ data }: ExperienceProps) => {
-  
-  var [expComp, setExpComp] = React.useState(Object.keys(data) ? getExp(Object.keys(data)[0],data) : undefined); 
+  var [expComp, setExpComp] = React.useState(
+    Object.keys(data) ? getExp(Object.keys(data)[0], data) : undefined,
+  );
   var buttonList: JSX.Element[] = [];
-  Object.keys(data).forEach(e => {
-    var exp = data[e]; 
+  Object.keys(data).forEach((e) => {
+    var exp = data[e];
     buttonList.push(
-      <Button color="dark" size="md" onClick={() => setExpComp(getExp(e, data))} block>
+      <Button
+        color="dark"
+        size="md"
+        onClick={() => setExpComp(getExp(e, data))}
+        block
+      >
         <i className={exp.icon}></i>
         &nbsp; {exp.name}
-      </Button>
-    )
-  })
+      </Button>,
+    );
+  });
 
   return (
-    <React.Fragment> 
-      <div className="container" >
+    <React.Fragment>
+      <div className="container">
         <div className="row">
-          <div className="col-lg-auto" style={{marginTop: '20px'}}>
+          <div className="col-lg-auto" style={{ marginTop: '20px' }}>
             {buttonList}
           </div>
-          <div className="col" style={{ margin: '10px', border: '1px solid', padding: '10px', borderRadius: '5%' }}>
-              {expComp}
+          <div
+            className="col"
+            style={{
+              margin: '10px',
+              border: '1px solid',
+              padding: '10px',
+              borderRadius: '5%',
+            }}
+          >
+            {expComp}
           </div>
         </div>
-      </div> 
+      </div>
     </React.Fragment>
-  )
-}
+  );
+};

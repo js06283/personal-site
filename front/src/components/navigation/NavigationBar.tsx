@@ -54,7 +54,9 @@ function NavigationBar({
 
   return (
     <Navbar color="light" light expand="lg">
-      <NavbarBrand href="/"><Media src={greyLogo} style={{ width: '100px' }}></Media></NavbarBrand>
+      <NavbarBrand href="/jessica-shi">
+        <Media src={greyLogo} style={{ width: '100px' }}></Media>
+      </NavbarBrand>
       {/* <NavbarBrand href="/">{brand}</NavbarBrand> */}
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
