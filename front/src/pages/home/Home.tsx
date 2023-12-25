@@ -32,7 +32,7 @@ function Home() {
               <div className="col">
                 <MainTitle>Jessica Shi</MainTitle>
                 <p>
-                  I'm a junior at Columbia studying Operations Research and
+                  I'm a senior at Columbia studying Operations Research and
                   minoring in Economics and Computer Science. I've worked as a
                   software engineer at the US Census Bureau and Microsoft, and
                   I've been involved in research at Columbia University and the
